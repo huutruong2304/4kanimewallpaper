@@ -3,7 +3,7 @@ import React from 'react';
 
 type Props = {};
 
-const Footer = (props: Props) => {
+const AppFooter = (props: Props) => {
   const footerItems: FooterItem[] = [
     { id: 1, href: 'https://www.facebook.com', name: 'Facebook' },
     { id: 2, href: 'https://www.twitter.com', name: 'Twitter' },
@@ -30,4 +30,4 @@ const Footer = (props: Props) => {
   );
 };
 
-export default Footer;
+export default AppFooter;

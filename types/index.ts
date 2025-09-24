@@ -13,8 +13,7 @@ export interface FooterItem {
 
 export interface ImageDetail {
   id: string;
-  link_img: string;
-  thumb_img: string;
+  thumbnail: string;
 }
 
 export interface Collection {

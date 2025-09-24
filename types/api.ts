@@ -1,6 +1,6 @@
 export interface ApiListResponse<T> {
   // define response here
-  data: T[];
+  data: T;
   status: number;
   current_page: number;
   first_page_url: string;
