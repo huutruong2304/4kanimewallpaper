@@ -1,5 +1,5 @@
-import ImageCard from '@/components/custom/image-card';
 import ImageSection from '@/components/custom/image-section';
+import WallpaperCard from '@/components/custom/wallpaper-card';
 import AppContainer from '@/components/layout/app-container';
 import { getImagesHot, getImagesNew, getImagesPopular } from '@/service/api';
 
@@ -18,21 +18,21 @@ export default async function Home() {
       {/* new */}
       <ImageSection title="New Upload" href="/new">
         {newList.map((item) => (
-          <ImageCard key={item.id} id={item.id} src={item.thumbnail} />
+          <WallpaperCard key={item.id} id={item.id} src={item.thumbnail} />
         ))}
       </ImageSection>
 
       {/* hot */}
       <ImageSection title="Hot" href="/top">
         {hotList.map((item) => (
-          <ImageCard key={item.id} id={item.id} src={item.thumbnail} />
+          <WallpaperCard key={item.id} id={item.id} src={item.thumbnail} />
         ))}
       </ImageSection>
 
       {/* popular */}
       <ImageSection title="Popular" href="/top">
         {popularList.map((item) => (
-          <ImageCard key={item.id} id={item.id} src={item.thumbnail} />
+          <WallpaperCard key={item.id} id={item.id} src={item.thumbnail} />
         ))}
       </ImageSection>
     </AppContainer>
