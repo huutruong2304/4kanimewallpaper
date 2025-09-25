@@ -13,6 +13,7 @@ import {
 } from '@/components/ui/navigation-menu';
 import { CoffeeIcon, ChartNoAxesColumnIcon, ShuffleIcon, LibraryBigIcon, StarIcon } from 'lucide-react';
 import { HeaderItem } from '@/types';
+import Image from 'next/image';
 
 type Props = {};
 
@@ -49,8 +50,12 @@ const AppHeader = (props: Props) => {
 
   return (
     <header className="bg-black shadow-2xl sticky top-0 z-50">
-      <div className="p-4 flex items-center justify-between container mx-auto">
-        <div className="text-orange-400 uppercase font-bold text-xl">4k Anime Wallpaper</div>
+      <div className="py-4 flex items-center justify-between container mx-auto">
+        <div className="text-orange-400 uppercase font-bold text-xl">
+          <div className="w-[270px] h-[70px] overflow-hidden rounded-md relative">
+            <Image src="/logo.png" alt="logo" fill className="object-cover -ml-16" />
+          </div>
+        </div>
         <NavigationMenu viewport={false}>
           <NavigationMenuList>
             {headerList.map((item) =>
