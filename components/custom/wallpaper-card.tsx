@@ -15,7 +15,7 @@ const WallpaperCard = ({ id, src }: Props) => {
       className="w-full cursor-pointer rounded-md overflow-hidden hover:scale-110 hover:z-10  transition duration-300 ease-in-out"
     >
       <AspectRatio ratio={16 / 9} className="min-h-36">
-        <Image src={src} alt={id} fill unoptimized className="object-cover object-center" />
+        <Image src={src} alt={id} fill className="object-cover object-center" unoptimized />
       </AspectRatio>
     </Link>
   );

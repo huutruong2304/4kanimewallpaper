@@ -2,8 +2,7 @@ import ImageSection from '@/components/custom/image-section';
 import WallpaperCard from '@/components/custom/wallpaper-card';
 import AppContainer from '@/components/layout/app-container';
 import { getImagesHot, getImagesNew, getImagesPopular } from '@/service/api';
-
-const LIMIT_PER_SECTION = 12;
+import { LIMIT_PER_SECTION } from './constant';
 
 export default async function Home() {
   const newResponse = await getImagesNew(1);

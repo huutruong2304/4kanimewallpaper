@@ -27,24 +27,6 @@ const AppHeader = (props: Props) => {
       name: 'Collections',
       href: '/collections',
       icon: <LibraryBigIcon className="!text-white !text-base" size={20} />,
-      // children: [
-      //   {
-      //     name: 'Naruto',
-      //     href: '/collections/naruto',
-      //   },
-      //   {
-      //     name: 'One Piece',
-      //     href: '/collections/one-piece',
-      //   },
-      //   {
-      //     name: 'Bleach',
-      //     href: '/collections/bleach',
-      //   },
-      //   {
-      //     name: 'Kimetsu no Yaiba',
-      //     href: '/collections/kimetsu-no-yaiba',
-      //   },
-      // ],
     },
   ];
 
@@ -53,7 +35,9 @@ const AppHeader = (props: Props) => {
       <div className="py-4 flex items-center justify-between container mx-auto">
         <div className="text-orange-400 uppercase font-bold text-xl">
           <div className="w-[270px] h-[70px] overflow-hidden rounded-md relative">
-            <Image src="/logo.png" alt="logo" fill className="object-cover -ml-16" />
+            <Link href="/">
+              <Image src="/logo.png" alt="logo" fill className="object-cover -ml-16" />
+            </Link>
           </div>
         </div>
         <NavigationMenu viewport={false}>
