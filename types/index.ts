@@ -26,3 +26,15 @@ export interface Collection {
   total_image: number;
   view: number;
 }
+
+export enum CategoryValue {
+  NEW = 'new',
+  HOT = 'hot',
+  POPULAR = 'popular',
+}
+
+export enum CategoryLabel {
+  NEW = 'New Upload',
+  HOT = 'Hot Wallpapers',
+  POPULAR = 'Top Rated',
+}

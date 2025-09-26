@@ -20,9 +20,9 @@ type Props = {};
 const AppHeader = (props: Props) => {
   const headerList: HeaderItem[] = [
     { name: 'New', href: '/new', icon: <CoffeeIcon className="text-white" size={20} /> },
-    { name: 'Hot', href: '/top', icon: <ChartNoAxesColumnIcon className="text-white" size={20} /> },
-    { name: 'Popular', href: '/popular', icon: <StarIcon className="text-white" size={20} /> },
-    { name: 'Random', href: '/random', icon: <ShuffleIcon className="text-white" size={20} /> },
+    { name: 'Hot', href: '/hot', icon: <ChartNoAxesColumnIcon className="text-white" size={20} /> },
+    { name: 'Top Rated', href: '/popular', icon: <StarIcon className="text-white" size={20} /> },
+    // { name: 'Random', href: '/random', icon: <ShuffleIcon className="text-white" size={20} /> },
     {
       name: 'Collections',
       href: '/collections',

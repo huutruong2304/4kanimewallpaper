@@ -3,6 +3,7 @@ import WallpaperCard from '@/components/custom/wallpaper-card';
 import AppContainer from '@/components/layout/app-container';
 import { getImagesHot, getImagesNew, getImagesPopular } from '@/service/api';
 import { LIMIT_PER_SECTION } from './constant';
+import { CategoryLabel } from '@/types';
 
 export default async function Home() {
   const newResponse = await getImagesNew(1);
@@ -15,21 +16,21 @@ export default async function Home() {
   return (
     <AppContainer>
       {/* new */}
-      <ImageSection title="New Upload" href="/new">
+      <ImageSection title={CategoryLabel.NEW} href="/new">
         {newList.map((item) => (
           <WallpaperCard key={item.id} id={item.id} src={item.thumbnail} />
         ))}
       </ImageSection>
 
       {/* hot */}
-      <ImageSection title="Hot" href="/top">
+      <ImageSection title={CategoryLabel.HOT} href="/top">
         {hotList.map((item) => (
           <WallpaperCard key={item.id} id={item.id} src={item.thumbnail} />
         ))}
       </ImageSection>
 
       {/* popular */}
-      <ImageSection title="Popular" href="/top">
+      <ImageSection title={CategoryLabel.POPULAR} href="/top">
         {popularList.map((item) => (
           <WallpaperCard key={item.id} id={item.id} src={item.thumbnail} />
         ))}

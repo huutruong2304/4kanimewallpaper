@@ -5,23 +5,25 @@ type Props = {};
 
 const AppFooter = (props: Props) => {
   const footerItems: FooterItem[] = [
-    { id: 1, href: 'https://www.facebook.com', name: 'Facebook' },
-    { id: 2, href: 'https://www.twitter.com', name: 'Twitter' },
-    { id: 3, href: 'https://www.instagram.com', name: 'Instagram' },
+    { id: 1, href: 'https://www.youtube.com/@Truongnh9x', name: 'Youtube' },
+    { id: 2, href: 'https://www.instagram.com/huutruongn/', name: 'Instagram' },
+    { id: 3, href: 'https://www.tiktok.com/@truongnh9x', name: 'TikTok' },
+    { id: 4, href: 'https://github.com/huutruong2304', name: 'GitHub' },
   ];
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="container max-w-3xl mx-auto py-4 flex flex-col md:flex-row justify-between gap-2">
+    <footer className="container max-w-3xl mx-auto py-4 flex flex-col items-center gap-2">
       <div className="footer-bottom text-center">
         <p>
-          &copy; {currentYear} <b>Truong Nguyen</b>. All rights reserved.
+          &copy; {currentYear} <b className="text-orange-500">Truong Nguyen</b>. Website design & code by me.
         </p>
+        <p>All images belong to their respective owners.</p>
       </div>
 
       <div className="flex gap-4 justify-center md:justify-end">
         {footerItems.map((item) => (
-          <a key={item.id} href={item.href} target="_blank" rel="noopener noreferrer">
+          <a key={item.id} href={item.href} target="_blank" rel="noopener noreferrer" className="hover:underline">
             {item.name}
           </a>
         ))}
