@@ -5,9 +5,7 @@ import React from 'react';
 import { LIMIT_PER_SECTION } from '../../constants';
 import { CategoryLabel } from '@/types';
 
-type Props = {};
-
-export default async function HotWallpapers(props: Props) {
+export default async function HotWallpapers() {
   const hotResponse = await getImagesHot(1);
   const hotList = hotResponse.data.slice(0, LIMIT_PER_SECTION);
   return (

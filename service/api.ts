@@ -4,11 +4,11 @@ import { fetcher } from './fetcher';
 import { ApiListResponse } from '@/types/api';
 
 export async function getCollection(page: number) {
-  return fetcher<ApiListResponse<Collection>>(`/albums?page=${page}`, { next: { revalidate: 60 * 60 } });
+  return fetcher<ApiListResponse<Collection[]>>(`/albums?page=${page}`, { next: { revalidate: 60 * 60 } });
 }
 
-export async function getCollectionDetail(id: string) {
-  return fetcher<Collection>(`/albums/${id}`, { next: { revalidate: 60 * 60 } });
+export async function getCollectionDetail(id: string, page?: number) {
+  return fetcher<ApiListResponse<ImageDetail[]>>(`/albums/${id}?page=${page}`, { next: { revalidate: 60 * 60 } });
 }
 
 export async function getImageDetail(id: string) {

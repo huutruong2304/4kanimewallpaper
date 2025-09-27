@@ -1,9 +1,7 @@
 import { FooterItem } from '@/types';
 import React from 'react';
 
-type Props = {};
-
-const AppFooter = (props: Props) => {
+const AppFooter = () => {
   const footerItems: FooterItem[] = [
     { id: 1, href: 'https://www.youtube.com/@Truongnh9x', name: 'Youtube' },
     { id: 2, href: 'https://www.instagram.com/huutruongn/', name: 'Instagram' },
