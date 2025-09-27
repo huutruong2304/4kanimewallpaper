@@ -11,13 +11,11 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from '@/components/ui/navigation-menu';
-import { CoffeeIcon, ChartNoAxesColumnIcon, ShuffleIcon, LibraryBigIcon, StarIcon } from 'lucide-react';
+import { CoffeeIcon, ChartNoAxesColumnIcon, LibraryBigIcon, StarIcon } from 'lucide-react';
 import { HeaderItem } from '@/types';
 import Image from 'next/image';
 
-type Props = {};
-
-const AppHeader = (props: Props) => {
+const AppHeader = () => {
   const headerList: HeaderItem[] = [
     { name: 'New', href: '/new', icon: <CoffeeIcon className="text-white" size={20} /> },
     { name: 'Hot', href: '/hot', icon: <ChartNoAxesColumnIcon className="text-white" size={20} /> },
@@ -32,7 +30,7 @@ const AppHeader = (props: Props) => {
 
   return (
     <header className="bg-black shadow-2xl sticky top-0 z-50">
-      <div className="py-4 flex items-center justify-between container mx-auto">
+      <div className="py-2 flex items-center justify-between container mx-auto">
         <div className="text-orange-400 uppercase font-bold text-xl">
           <div className="w-[270px] h-[70px] overflow-hidden rounded-md relative">
             <Link href="/">
