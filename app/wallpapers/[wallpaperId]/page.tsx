@@ -4,6 +4,7 @@ import SectionWrapper from '@/components/custom/section-wrapper';
 import AppContainer from '@/components/layout/app-container';
 import { getImageDetail, getImagesNew } from '@/service/api';
 import Image from 'next/image';
+import { notFound } from 'next/navigation';
 import React from 'react';
 
 type Props = {
@@ -46,6 +47,10 @@ export default async function WallpaperPage(props: Props) {
   const { wallpaperId } = await props.params;
   const details = await getImageDetail(wallpaperId);
 
+  if (!details) {
+    return notFound();
+  }
+
   return (
     <AppContainer>
       <SectionWrapper title={'Wallpapers for dekstop & moble'}>
@@ -64,7 +69,7 @@ export default async function WallpaperPage(props: Props) {
 
 // Generate static params for SEO and performance
 export async function generateStaticParams() {
-  const totalPages = 20;
+  const totalPages = 2;
   const results = await Promise.all(Array.from({ length: totalPages }, (_, i) => getImagesNew(i + 1)));
   const allWallpapers = results.flatMap((res) => res.data);
   return allWallpapers.map((item) => ({

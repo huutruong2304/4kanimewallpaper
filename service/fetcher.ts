@@ -32,18 +32,25 @@ export async function fetcher<T>(
     ...(body && { body: isFormData ? body : JSON.stringify(body) }),
   });
 
+  const contentType = res.headers.get('content-type') || '';
+
   if (!res.ok) {
     let errorBody;
     try {
-      errorBody = await res.json();
+      if (contentType.includes('application/json')) {
+        errorBody = await res.json();
+      } else {
+        errorBody = { message: await res.text() };
+      }
     } catch {
       errorBody = { message: 'Unknown error' };
     }
 
-    const error = new Error(errorBody.message || 'Something went wrong');
-    (error as any).status = res.status;
-    (error as any).info = errorBody;
-    throw error;
+    return Promise.reject({
+      status: res.status,
+      statusText: res.statusText,
+      ...errorBody,
+    });
   }
 
   return res.json();
