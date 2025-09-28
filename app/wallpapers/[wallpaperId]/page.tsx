@@ -69,7 +69,7 @@ export default async function WallpaperPage(props: Props) {
 
 // Generate static params for SEO and performance
 export async function generateStaticParams() {
-  const totalPages = 2;
+  const totalPages = 1;
   const results = await Promise.all(Array.from({ length: totalPages }, (_, i) => getImagesNew(i + 1)));
   const allWallpapers = results.flatMap((res) => res.data);
   return allWallpapers.map((item) => ({
