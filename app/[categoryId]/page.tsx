@@ -16,18 +16,18 @@ type Props = {
 export async function generateMetadata({ params }: Props) {
   const { categoryId } = await params;
 
-  let title = 'Others - 4K Anime Wallpaper';
+  let title = 'Others - 4K Anime Wallpapers';
   let description = 'A collection of high-quality 4K anime wallpapers for your desktop and mobile devices.';
 
   if (categoryId === CategoryValue.NEW) {
-    title = 'New - 4K Anime Wallpaper';
+    title = 'New - 4K Anime Wallpapers';
     description = 'Discover the latest 4K anime wallpapers, updated regularly with fresh and vibrant designs for your desktop and mobile devices.';
   } else if (categoryId === CategoryValue.HOT) {
-    title = 'Hot Wallpapers - 4K Anime Wallpaper';
+    title = 'Hot Wallpapers - 4K Anime Wallpapers';
     description =
       'Explore the hottest 4K anime wallpapers that are trending now, featuring popular and eye-catching designs for your desktop and mobile devices.';
   } else if (categoryId === CategoryValue.POPULAR) {
-    title = 'Top Rated - 4K Anime Wallpaper';
+    title = 'Top Rated - 4K Anime Wallpapers';
     description =
       'Browse our top-rated 4K anime wallpapers, curated for quality and popularity, perfect for enhancing your desktop and mobile devices.';
   }
