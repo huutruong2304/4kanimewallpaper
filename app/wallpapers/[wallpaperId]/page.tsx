@@ -57,7 +57,7 @@ export default async function WallpaperPage(props: Props) {
         <div className="relative w-full max-w-full h-[30vh]  md:max-w-3xl md:h-[500px] rounded-lg shadow mx-auto overflow-hidden">
           <Image src={details.link_img} alt={details.id} fill className="object-cover" />
         </div>
-        <div className="flex justify-center my-8">
+        <div className="flex justify-center my-4 md:my-8">
           <DownloadWallpaper url={details.link_img} filename={details.name || details.id} />
         </div>
       </SectionWrapper>

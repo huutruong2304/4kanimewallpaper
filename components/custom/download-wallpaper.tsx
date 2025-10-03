@@ -35,7 +35,7 @@ export default function DownloadWallpaper({ url, filename, downloadLabel = 'Down
   };
 
   return (
-    <Button onClick={handleDownload} className="bg-orange-500 hover:bg-orange-600 w-96 text-base cursor-pointer" disabled={isDownloading}>
+    <Button onClick={handleDownload} className="bg-orange-500 hover:bg-orange-600 w-full md:w-96 text-base cursor-pointer" disabled={isDownloading}>
       {isDownloading ? <Loader2Icon className="animate-spin" /> : <DownloadIcon />}
       {downloadLabel}
     </Button>
