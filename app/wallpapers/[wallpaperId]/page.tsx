@@ -53,8 +53,8 @@ export default async function WallpaperPage(props: Props) {
 
   return (
     <AppContainer>
-      <SectionWrapper title={'Wallpapers for dekstop & moble'}>
-        <div className="relative max-w-3xl h-[500px] rounded-lg shadow mx-auto overflow-hidden">
+      <SectionWrapper title={'Free Anime Wallpaper'}>
+        <div className="relative w-full max-w-full h-[30vh]  md:max-w-3xl md:h-[500px] rounded-lg shadow mx-auto overflow-hidden">
           <Image src={details.link_img} alt={details.id} fill className="object-cover" />
         </div>
         <div className="flex justify-center my-8">
