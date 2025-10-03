@@ -14,7 +14,7 @@ type Props = {
 const ImageSection = ({ title, children, href, viewMoreLabel = 'View more' }: Props) => {
   return (
     <SectionWrapper title={title}>
-      <div className="grid grid-cols-4 gap-4">{children}</div>
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">{children}</div>
 
       {!!href && (
         <div className="w-full mt-8 flex justify-center">
