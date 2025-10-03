@@ -16,7 +16,7 @@ git pull origin main
 npm install
 
 # Uncomment the next line if you need to edit environment variables before build
-# nano .env
+nano .env
 
 # Build the project
 npm run build
